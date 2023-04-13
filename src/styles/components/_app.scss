@@ -1,0 +1,27 @@
+.app__main {
+  align-items: center;
+  background-color: $magnolia;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0px;
+  width: 100vw;
+}
+
+.app__container {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  height: 80%;
+  padding: 15px;
+  width: 60%;
+}
+
+@media (max-width: 375px) {
+  .app__container {
+    height: 100vh;
+    padding: 0px;
+    width: 100vw;
+  }
+}

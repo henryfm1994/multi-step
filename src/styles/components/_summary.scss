@@ -1,0 +1,39 @@
+.summary__container {
+  color: $cool-gray;
+}
+.summary__details {
+  background-color: $magnolia;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 25px;
+}
+
+.summary__details-plan {
+  color: $marine-blue;
+  font-weight: 600;
+}
+
+.summary__details-plan span {
+  color: $cool-gray;
+  font-weight: 400;
+
+  &:hover {
+    color: $purplish-blue;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 2px solid $purplish-blue;
+  }
+}
+
+.summary__total {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.summary__total-number {
+  color: $purplish-blue;
+  font-size: larger;
+  font-weight: 600;
+}

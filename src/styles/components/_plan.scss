@@ -1,0 +1,137 @@
+.plan__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan__types {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  // height: 150px;
+}
+
+.plan__types :nth-child(2) {
+  min-width: 105px;
+}
+
+.plan__data {
+  border: solid 1px $purplish-blue;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+
+  &:hover {
+    background-color: $magnolia;
+  }
+
+  &:focus {
+    background-color: $magnolia;
+  }
+}
+
+.plan__icono {
+  margin-bottom: 30px;
+}
+
+.plan__details {
+  color: $marine-blue;
+}
+
+.plan__price-datails {
+  color: $cool-gray;
+}
+
+.plan__switch {
+  background-color: $magnolia;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+
+  input {
+    position: absolute;
+    // left: -99em;
+  }
+}
+
+.plan__toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 21px;
+  background-color: $marine-blue;
+  border-radius: 90px - 6;
+  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  &:before {
+    content: "Monthly";
+    position: absolute;
+    left: -90px;
+    // top: 15px;
+    font-size: 18px;
+    color: $marine-blue;
+  }
+
+  &:after {
+    content: "Yearly";
+    position: absolute;
+    right: -70px;
+    // top: 15px;
+    font-size: 18px;
+    color: $cool-gray;
+  }
+}
+
+.plan__toggle-handler {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg);
+}
+
+.plan__switch input:checked {
+  + .plan__toggle {
+    background-color: $marine-blue;
+
+    &:before {
+      color: hsl(231, 11%, 63%);
+    }
+
+    &:after {
+      color: $marine-blue;
+    }
+
+    .plan__toggle-handler {
+      background-color: $white;
+      transform: translate3d(17px, 0, 0) rotate(0);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .plan__types {
+    flex-direction: column;
+  }
+
+  .plan__data {
+    flex-direction: row;
+    justify-content: start;
+    margin: 10px;
+  }
+
+  .plan__icono {
+    margin: 0px;
+  }
+}
